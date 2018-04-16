@@ -11,8 +11,18 @@ import com.niit.model.Product;
 public class ProductServiceImpl implements ProductService {
 	@Autowired
 private ProductDao productDao;
+	public ProductServiceImpl(){
+		System.out.println("ProductServiceImpl bean is Created");
+	}
 	public List<Product> getAllProducts() {
 		return productDao.getAllProducts();
+	}
+	public Product getProduct(int id) {
+		//call dao 
+		return productDao.getProduct(id);
+	}
+	public void deleteProduct(int id) {
+		productDao.deleteProduct(id);
 	}
 
 }

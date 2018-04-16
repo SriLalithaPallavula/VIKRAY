@@ -54,14 +54,3 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
