@@ -22,8 +22,8 @@
                     <img class="first-slide home-image" src='<c:url value="/resources/images/ast.jpg"></c:url>' alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME TO THE CAR STORE</h1>
-                            <p>Here You Can Browse And Buy Cars.Order Now For Your Amazing New Arrivals</p>
+                            <h1>WELCOME TO VIKRAY...for all your needs!!</h1>
+                            <p>Order Now For Amazing New Arrivals</p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <img class="second-slide home-image" src='<c:url value="/resources/images/2.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car Store.</h1>
+                            <h1>The Store.</h1>
                             <p>online shopping can make your life more easier</p>
                         </div>
                     </div>
