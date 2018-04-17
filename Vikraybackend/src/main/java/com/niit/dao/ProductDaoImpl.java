@@ -44,7 +44,14 @@ private SessionFactory sessionFactory;
 		session.delete(product);
 		//delete from product_s180396 where id=1;
 	}
+	public void saveOrUpdateProduct(Product product) {
+	   Session session=sessionFactory.getCurrentSession();
+	   System.out.println("Id of the product " + product.getId());
+	   session.saveOrUpdate(product);
+	   //insert into product_s180396 values (?,....)
+	   //or update Product_s180396 set ...
+	   System.out.println("after inserting id of product is " + product.getId() );
+	}
+	
 
 }
-
-

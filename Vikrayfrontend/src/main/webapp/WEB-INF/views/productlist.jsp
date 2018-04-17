@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	List of Products
+
 	<!-- for iteration - similar to for() in Java -->
 	<!-- productsAttr is a model attribute, to which we have assigned List<Product> -->
 	<!-- 
@@ -19,38 +19,44 @@ productsAttr ->
 p = 1 1000.0 Product Description for toy car Toy Car 12
 2 1300.0 Product Description Book 2
  -->
-	<table class="table">
-		<thead>
-			<tr>
-				<th>ProductName</th>
-				<th>Price</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${productsAttr }" var="p">
+	<div class="container">
+		<b>List of Products</b>
+		<table class="table table-hover" border="2">
+			<thead id="thead">
 				<tr>
-					<!-- p.getProductName() -->
-					<!-- p.getPrice() -->
-					<td>${p.productname }</td>
-					<td>${p.price }</td>
-					<!-- http://...../all/getproduct/1 
+					<th>ProductName</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				<c:forEach items="${productsAttr }" var="p">
+					<tr>
+						<!-- p.getProductName() -->
+						<!-- p.getPrice() -->
+						<td>${p.productname }</td>
+						<td>${p.price }</td>
+						<!-- http://...../all/getproduct/1 
 					http://........../all/getproduct/2
 					http://..../all/getproduct/3
 					-->
-					<!--  when glyphicon info sign is clicked, request
+						<!--  when glyphicon info sign is clicked, request
 					 will be handled by the RequestMapping value 'all/getproduct/1 -->
-					<td><a href='<c:url value="/all/getproduct/${p.id }"></c:url>'>
-							<span class="glyphicon glyphicon-info-sign"></span>
+						<td><a
+							href='<c:url value="/all/getproduct/${p.id }"></c:url>'> <span
+								class="glyphicon glyphicon-info-sign"></span>
+
+						</a> <a href='<c:url value="/admin/deleteproduct/${p.id }"></c:url>'><span
+								class="glyphicon glyphicon-trash"></span></a>
+								
+						<a href='<c:url value="/admin/updateproductform/${p.id }"></c:url>'><span class="glyphicon glyphicon-pencil"></span></a>		
+						</td>
+								
 						
-					</a>
-					<a href='<c:url value="/admin/deleteproduct/${p.id }"></c:url>'><span class="glyphicon glyphicon-trash"></span></a>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 </body>
-
 </html>
-

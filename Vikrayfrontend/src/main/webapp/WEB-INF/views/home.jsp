@@ -19,39 +19,39 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="first-slide home-image" src='<c:url value="/resources/images/ast.jpg"></c:url>' alt="first slide" height="100%" width="100%">
+                    <img class="first-slide home-image" src='<c:url value="/resources/images/telangana.jpg"></c:url>' alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME TO VIKRAY...for all your needs!!</h1>
-                            <p>Order Now For Amazing New Arrivals</p>
+                            <h1>WELCOME TO VIKRAY</h1>
+                            <p>Here You Can Browse And Buy toys.Order Now For Amazing New Arrivals</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="second-slide home-image" src='<c:url value="/resources/images/2.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
+                    <img class="second-slide home-image" src='<c:url value="/resources/images/7-nirmal-toys.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Store.</h1>
-                            <p>online shopping can make your life more easier</p>
+                            <h1>The Handicraft Store.</h1>
+                            <p>online shop for Handmade gifts</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide home-image " src='<c:url value="/resources/images/3.jpg"></c:url>' alt="Third slide" height="100%" width="100%">
+                    <img class="third-slide home-image " src='<c:url value="/resources/images/kond.jpg"></c:url>' alt="Third slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car You Love</h1>
-                            <p>live Freely,Work Happily And Drive Safely!!</p>
+                            <h1>The Crafts You Love to Decorate</h1>
+                            <p>Unique....!!</p>
                         </div>
                     </div>
                 </div>
                  <div class="item">
                  <!-- mvc:resources /resources/**  -> /WEB-INF/resources -->
-                    <img class="forth-slide home-image " src='<c:url value="/resources/images/4.jpg"></c:url>' alt="forth slide" height="100%" width="100%">
+                    <img class="forth-slide home-image " src='<c:url value="/resources/images/elephant toy.jpg"></c:url>' alt="forth slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Any car can be a "cool" car</h1>
-                            <p>your life,your car...you own it!!</p>
+                            <h1>Giving value to our Culture</h1>
+                            <p>Made in India..!!</p>
                         </div>
                     </div>
                 </div>

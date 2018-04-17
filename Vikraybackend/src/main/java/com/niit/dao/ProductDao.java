@@ -8,4 +8,5 @@ public interface ProductDao {
 List<Product> getAllProducts();
 Product getProduct(int id);
 void deleteProduct(int id);
+void saveOrUpdateProduct(Product product);
 }

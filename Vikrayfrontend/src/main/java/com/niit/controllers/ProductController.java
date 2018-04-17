@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -50,5 +51,29 @@ private ProductService productService;
 		productService.deleteProduct(id);
 		return "redirect:/all/getproducts";
 	}
+	@RequestMapping(value="/admin/getproductform")
+	public ModelAndView getProductForm(){
+		return new ModelAndView("productform","product",new Product());
+	}
+	@RequestMapping(value="/admin/updateproductform/{id}")
+	public ModelAndView getUpdateProductForm(@PathVariable int id){
+		Product product=productService.getProduct(id);
+		return new ModelAndView("updateproductform","product",product);
+	}
 	
+	
+	@RequestMapping(value="/admin/saveproduct")
+	public String saveProduct(@ModelAttribute(name="product") Product product){
+		System.out.println("New Product Details " + product);
+		productService.saveProduct(product);
+		return "redirect:/all/getproducts";
+	}
+	
+	@RequestMapping(value="/admin/updateproduct")
+	public String updateProduct(@ModelAttribute(name="product") Product product){
+		System.out.println("New Product Details " + product);
+		productService.updateProduct(product);
+		return "redirect:/all/getproducts";
+	}
 }
+

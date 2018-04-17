@@ -24,5 +24,14 @@ private ProductDao productDao;
 	public void deleteProduct(int id) {
 		productDao.deleteProduct(id);
 	}
+	public void saveProduct(Product product) {
+		productDao.saveOrUpdateProduct(product);
+		
+	}
+	public void updateProduct(Product product) {
+		productDao.saveOrUpdateProduct(product);
+		
+	}
 
 }
+
