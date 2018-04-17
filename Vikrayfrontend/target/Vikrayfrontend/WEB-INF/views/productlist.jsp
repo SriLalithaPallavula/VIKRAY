@@ -25,6 +25,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 			<thead id="thead">
 				<tr>
 					<th>ProductName</th>
+					<th>color</th>
 					<th>Price</th>
 					<th>Action</th>
 				</tr>
@@ -35,6 +36,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 						<!-- p.getProductName() -->
 						<!-- p.getPrice() -->
 						<td>${p.productname }</td>
+						<td>${p.color }</td>
 						<td>${p.price }</td>
 						<!-- http://...../all/getproduct/1 
 					http://........../all/getproduct/2

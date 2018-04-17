@@ -22,7 +22,7 @@
                     <img class="first-slide home-image" src='<c:url value="/resources/images/telangana.jpg"></c:url>' alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME TO VIKRAY</h1>
+                            <h1>WELCOME</h1>
                             <p>Here You Can Browse And Buy toys.Order Now For Amazing New Arrivals</p>
                         </div>
                     </div>

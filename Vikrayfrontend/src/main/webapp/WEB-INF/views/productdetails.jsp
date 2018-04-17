@@ -12,6 +12,7 @@
 <!-- product.getProductName() -->
 <b>ProductName</b>: ${product.productname }<br>
 <b>Product Description</b>: ${product.productdescription }<br>
+<b>Color</b>:${product.color }<br>
 <b>Price </b>: ${product.price }<br>
 <b>Quantity </b>:${product.quantity }
 </div>

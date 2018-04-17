@@ -4,7 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity  //mapped with Product relational table
 @Table(name="product_s180396")
@@ -12,11 +17,20 @@ public class Product {
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
+@NotEmpty(message="ProductName cannot be blank(*)")
 private String productname;
+@NotEmpty(message="Product description is required(*)")
 private String productdescription;
+@Min(value=1,message="minimum quantity must be 1")
 private int quantity;
-private double price;
+@Min(value=1,message="minimum price must be 1")
 private String color;
+@NotEmpty(message="Color description is required(*)")
+private double price;
+@ManyToOne
+@JoinColumn(name="cid")
+private Category category;
+
 public int getId() {
 	return id;
 }
@@ -47,6 +61,13 @@ public double getPrice() {
 public void setPrice(double price) {
 	this.price = price;
 }
+
+public Category getCategory() {
+	return category;
+}
+public void setCategory(Category category) {
+	this.category = category;
+}
 public String getColor() {
 	return color;
 }
@@ -54,4 +75,9 @@ public void setColor(String color) {
 	this.color = color;
 }
 
+
+@Override
+public String toString() {
+	return "[" + this.id + " " + this.productname + " " + this.productdescription + " " + this.color + " " + this.price + " " + this.quantity + " ]";
+}
 }

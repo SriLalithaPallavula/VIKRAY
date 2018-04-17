@@ -23,26 +23,37 @@
 		<form:label path="productname">Enter product Name</form:label>
 		<!-- product.setProductname('Pen') -->
 		<form:input path="productname" class="form-control" style="width:750px"/>
+		<form:errors path="productname" cssStyle="color:red"></form:errors>
         </div>
         
         <div class="form-group">
 		<form:label path="productdescription">Enter ProductDescription</form:label>
 		<!-- product.setProductDescription('.....') -->
 		<form:textarea path="productdescription"  class="form-control" style="width:750px"/>
+		<form:errors path="productdescription" cssStyle="color:red"></form:errors>
         </div>
+        
+        <div class="form-group">
+		<form:label path="color">Enter product Color</form:label>
+		<!-- product.setProductname('Pen') -->
+		<form:input path="color" class="form-control" style="width:750px"/>
+		<form:errors path="color" cssStyle="color:red"></form:errors>
+        </div>
+        
         <div class="form-group">
 		<form:label path="quantity">Enter Quantity</form:label>
 		<!-- product.setQuantity(12) -->
 		<form:input path="quantity" class="form-control" style="width:750px"/>
+		<form:errors path="quantity" cssStyle="color:red" ></form:errors>
         </div>
         <div class="form-group">
 		<form:label path="price">Enter Price</form:label>
 		<!-- product.setPrice(..) -->
 		<form:input path="price" class="form-control" style="width:750px"/>
+		<form:errors path="price" cssStyle="color:red"></form:errors>
         </div>
 		<input type="submit" value="Add Product">
 	</form:form>
 	</div>
 </body>
 </html>
-

@@ -11,13 +11,19 @@ public HomeController(){
 }
 
 //This a handler method
-//It can handle the request "http://localhost:8080/project1frontend/home -> DispatcherServlet -> "home"->
+//It can handle the request "http://localhost:8080/Vikrayfrontend/home -> DispatcherServlet -> "home"->
 // /WEB-INF/views/home.jsp
-@RequestMapping(value="/home")
-
-public ModelAndView getHomePage(){
-		
+@RequestMapping("/")
+public ModelAndView getHomePage()
+{
+	
+	
+	
 	ModelAndView mv=new ModelAndView("home");
+	
 	return mv;
+	
+	
+
 }
 }

@@ -4,8 +4,11 @@ package com.niit.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,14 +66,22 @@ private ProductService productService;
 	
 	
 	@RequestMapping(value="/admin/saveproduct")
-	public String saveProduct(@ModelAttribute(name="product") Product product){
+	//product is the value entered by the user in the product form
+	//validate productname is notempty, productdescription is notempty, min price is 1,min quantity is 1
+	public String saveProduct(@Valid @ModelAttribute(name="product") Product product,BindingResult result){
+		if(result.hasErrors()){//hasErrors return true if product details in not valid
+			return "productform";
+		}
 		System.out.println("New Product Details " + product);
 		productService.saveProduct(product);
 		return "redirect:/all/getproducts";
 	}
 	
 	@RequestMapping(value="/admin/updateproduct")
-	public String updateProduct(@ModelAttribute(name="product") Product product){
+	public String updateProduct(@Valid @ModelAttribute(name="product") Product product,BindingResult result){
+		if(result.hasErrors()){
+			return "updateproductform";
+		}
 		System.out.println("New Product Details " + product);
 		productService.updateProduct(product);
 		return "redirect:/all/getproducts";
