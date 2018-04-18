@@ -52,6 +52,20 @@
 		<form:input path="price" class="form-control" style="width:750px"/>
 		<form:errors path="price" cssStyle="color:red"></form:errors>
         </div>
+        
+         <div class="form-group">
+        <!-- FK(cid) in Product table 
+        category.setId(100)..
+        -->
+        <form:label path="category.id">Select Category</form:label>
+     
+        <form:select path="category.id">
+        <c:forEach items="${categories }" var="c">
+        
+        <form:option value="${c.id }">${c.categoryname }  ${c.id }</form:option>
+        </c:forEach>
+        </form:select>
+        </div>
 		<input type="submit" value="Add Product">
 	</form:form>
 	</div>

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.niit.dao.ProductDao;
+import com.niit.model.Category;
 import com.niit.model.Product;
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -31,6 +32,9 @@ private ProductDao productDao;
 	public void updateProduct(Product product) {
 		productDao.saveOrUpdateProduct(product);
 		
+	}
+	public List<Category> getAllCategories() {
+		return productDao.getAllCategories();
 	}
 
 }

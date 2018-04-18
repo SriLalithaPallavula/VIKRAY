@@ -8,12 +8,14 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.services.ProductService;
 
@@ -86,5 +88,17 @@ private ProductService productService;
 		productService.updateProduct(product);
 		return "redirect:/all/getproducts";
 	}
+	@RequestMapping(value="/admin/getproductform")
+	public String getProductForm(Model model){//model to send data to the view
+		//Two model attributes
+		//product =new Product();
+		//categories = List<Category>
+		List<Category> categories=productService.getAllCategories();
+		model.addAttribute("product",new Product());
+		model.addAttribute("categories",categories);
+		System.out.println("Size of category list " + categories.size());
+		return "productform";
+	}
+	
 }
 

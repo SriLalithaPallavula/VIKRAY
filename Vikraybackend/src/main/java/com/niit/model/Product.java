@@ -29,6 +29,7 @@ private String color;
 private double price;
 @ManyToOne
 @JoinColumn(name="cid")
+//FK category_id
 private Category category;
 
 public int getId() {

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
 @Repository
 @Transactional
@@ -52,6 +53,12 @@ private SessionFactory sessionFactory;
 	   //or update Product_s180396 set ...
 	   System.out.println("after inserting id of product is " + product.getId() );
 	}
-	
+	public List<Category> getAllCategories() {
+		Session session=sessionFactory.getCurrentSession();
+		//select * from category_s180396
+		Query query=session.createQuery("from Category");
+		List<Category> categories=query.list();
+		return categories;
+	}
 
 }
