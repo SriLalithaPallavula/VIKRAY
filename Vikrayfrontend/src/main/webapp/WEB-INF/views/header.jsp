@@ -63,8 +63,8 @@
 					<!-- Request parameter
 					parameter name is 'searchCondition' -->
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Kitchen and Dining"></c:url>'>Kitchen and Dining</a>
-					   <a href='<c:url value="/all/searchbycategory?searchCondition=Furniture"></c:url>'>Furniture</a>
-					   <a href='<c:url value="/all/searchbycategory?searchCondition=Education"></c:url>'>Education</a>
+					   <a href='<c:url value="/all/searchbycategory?searchCondition=Furniture"></c:url>'>Fashion</a>
+					   <a href='<c:url value="/all/searchbycategory?searchCondition=Education"></c:url>'>Jewelry</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Toys"></c:url>'>Toys</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=All"></c:url>'>All</a>
                     </li>

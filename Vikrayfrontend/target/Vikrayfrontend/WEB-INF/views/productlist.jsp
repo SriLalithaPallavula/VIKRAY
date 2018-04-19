@@ -66,9 +66,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 						</a> <a href='<c:url value="/admin/deleteproduct/${p.id }"></c:url>'><span
 								class="glyphicon glyphicon-trash"></span></a>
 								
-						<a href='<c:url value="/admin/updateproductform/${p.id }"></c:url>'><span class="glyphicon glyphicon-
-
-pencil"></span></a>		
+						<a href='<c:url value="/admin/updateproductform/${p.id }"></c:url>'><span class="glyphicon glyphicon-pencil"></span></a>		
 						</td>
 								
 						

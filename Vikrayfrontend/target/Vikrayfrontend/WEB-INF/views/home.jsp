@@ -19,25 +19,25 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="first-slide home-image" src='<c:url value="/resources/images/telangana.jpg"></c:url>' alt="first slide" height="100%" width="100%">
+                    <img class="first-slide home-image" src='<c:url value="/resources/images/beauty.jpg"></c:url>' alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME</h1>
-                            <p>Here You Can Browse And Buy toys.Order Now For Amazing New Arrivals</p>
+                            <h1>WELCOME TO VIKRAY</h1>
+                            <p>Order Now For Amazing New Arrivals</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="second-slide home-image" src='<c:url value="/resources/images/7-nirmal-toys.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
+                    <img class="second-slide home-image" src='<c:url value="/resources/images/jewelry.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Handicraft Store.</h1>
-                            <p>online shop for Handmade gifts</p>
+                            <h1>The PERFECT Store.</h1>
+                            <p>online shop to build your lifestyle!!</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide home-image " src='<c:url value="/resources/images/kond.jpg"></c:url>' alt="Third slide" height="100%" width="100%">
+                    <img class="third-slide home-image " src='<c:url value="/resources/images/Crafts Home Decoration.jpg"></c:url>' alt="Third slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>The Crafts You Love to Decorate</h1>
@@ -47,14 +47,23 @@
                 </div>
                  <div class="item">
                  <!-- mvc:resources /resources/**  -> /WEB-INF/resources -->
-                    <img class="forth-slide home-image " src='<c:url value="/resources/images/elephant toy.jpg"></c:url>' alt="forth slide" height="100%" width="100%">
+                    <img class="forth-slide home-image " src='<c:url value="/resources/images/Disney-Toys.jpg"></c:url>' alt="forth slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Giving value to our Culture</h1>
-                            <p>Made in India..!!</p>
+                            <h1>kids toys</h1>
+                            <p>play time</p>
                         </div>
+                       
                     </div>
                 </div>
+                 <div class="item">
+                 <!-- mvc:resources /resources/**  -> /WEB-INF/resources -->
+                    <img class="fifth-slide home-image " src='<c:url value="/resources/images/kitchen.jpg"></c:url>' alt="fifth slide" height="100%" width="100%">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>KITCHEN AND DINING</h1>
+                            <p>everything you need..</p>
+                        </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
