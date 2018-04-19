@@ -1,3 +1,4 @@
+
 package com.niit.model;
 
 import java.util.List;
@@ -32,7 +33,8 @@ public void setCategoryname(String categoryname) {
 	this.categoryname = categoryname;
 }
 @Override
-public String toString() {
-	return "Id: " + this.id + " " + "cn: "+this.categoryname; 
-}
+	public String toString() {
+		return "Id: " + this.id + " " + "cn: "+this.categoryname; 
+	}
+
 }

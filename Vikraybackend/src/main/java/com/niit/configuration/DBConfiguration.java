@@ -23,11 +23,13 @@ public class DBConfiguration {
 	
 	@Bean(name="dataSource")
 	public DataSource getDataSource() {
+		System.out.println("Entering DataSource Bean creation method ");
 	    BasicDataSource dataSource = new BasicDataSource();
 	    dataSource.setDriverClassName("org.h2.Driver");
 	    dataSource.setUrl("jdbc:h2:tcp://localhost/~/lalitha");
 	    dataSource.setUsername("sa");
 	    dataSource.setPassword("");
+	    System.out.println("DataSource bean " +dataSource);
 	    return dataSource;
 	}
 	/*
@@ -36,6 +38,7 @@ public class DBConfiguration {
 	 */
 	@Bean //SessionFactory - factory of session objects
 	public SessionFactory sessionFactory() {
+		System.out.println("Entering sessionFactory creation method");
 		LocalSessionFactoryBuilder lsf=
 				new LocalSessionFactoryBuilder(getDataSource());
 		Properties hibernateProperties=new Properties();
@@ -48,6 +51,7 @@ public class DBConfiguration {
 		//Map all entities to relational table
 		Class classes[]=new Class[]{Product.class,Category.class};
 		//localsesionfactorybuilder -> sessionfactory -> map all entities with relation table
+		System.out.println("SessionFactory bean " + lsf);
 	    return lsf.addAnnotatedClasses(classes).buildSessionFactory();
 	}
 	@Bean

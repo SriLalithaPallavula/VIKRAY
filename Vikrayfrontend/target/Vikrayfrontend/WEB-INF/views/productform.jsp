@@ -14,7 +14,7 @@
 	<div class="container">
 	<h3 align="center">Add Product</h3>
 	<c:url value="/admin/saveproduct" var="url"></c:url>
-	<form:form action='${url }' modelAttribute="product" role="form">
+	<form:form action='${url }' modelAttribute="product" role="form" enctype="multipart/form-data">
 		<!-- hidden field is for product id
 			product.setId(0)
  		-->
@@ -32,14 +32,12 @@
 		<form:textarea path="productdescription"  class="form-control" style="width:750px"/>
 		<form:errors path="productdescription" cssStyle="color:red"></form:errors>
         </div>
-        
-        <div class="form-group">
+<div class="form-group">
 		<form:label path="color">Enter product Color</form:label>
 		<!-- product.setProductname('Pen') -->
 		<form:input path="color" class="form-control" style="width:750px"/>
 		<form:errors path="color" cssStyle="color:red"></form:errors>
         </div>
-        
         <div class="form-group">
 		<form:label path="quantity">Enter Quantity</form:label>
 		<!-- product.setQuantity(12) -->
@@ -53,7 +51,7 @@
 		<form:errors path="price" cssStyle="color:red"></form:errors>
         </div>
         
-         <div class="form-group">
+        <div class="form-group">
         <!-- FK(cid) in Product table 
         category.setId(100)..
         -->
@@ -62,11 +60,19 @@
         <form:select path="category.id">
         <c:forEach items="${categories }" var="c">
         
-        <form:option value="${c.id }">${c.categoryname }  ${c.id }</form:option>
+        <form:option value="${c.id }">${c.categoryname } </form:option>
         </c:forEach>
         </form:select>
         </div>
+        
+        <div class="form-group">
+		<form:label path="image">Upload image</form:label>
+		<form:input type="file" path="image"></form:input>
+		</div>
+        
 		<input type="submit" value="Add Product">
+		
+		
 	</form:form>
 	</div>
 </body>

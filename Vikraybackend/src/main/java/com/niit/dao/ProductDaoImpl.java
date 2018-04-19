@@ -60,5 +60,7 @@ private SessionFactory sessionFactory;
 		List<Category> categories=query.list();
 		return categories;
 	}
+	
 
 }
+

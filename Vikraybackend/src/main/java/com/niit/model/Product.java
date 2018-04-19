@@ -7,9 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
+
 
 @Entity  //mapped with Product relational table
 @Table(name="product_s180396")
@@ -23,14 +26,16 @@ private String productname;
 private String productdescription;
 @Min(value=1,message="minimum quantity must be 1")
 private int quantity;
-@Min(value=1,message="minimum price must be 1")
-private String color;
 @NotEmpty(message="Color description is required(*)")
+private String color;
+@Min(value=1,message="minimum price must be 1")
 private double price;
 @ManyToOne
 @JoinColumn(name="cid")
 //FK category_id
 private Category category;
+@Transient //not persistent
+private MultipartFile image;
 
 public int getId() {
 	return id;
@@ -62,6 +67,12 @@ public double getPrice() {
 public void setPrice(double price) {
 	this.price = price;
 }
+public String getColor() {
+	return color;
+}
+public void setColor(String color) {
+	this.color = color;
+}
 
 public Category getCategory() {
 	return category;
@@ -69,11 +80,11 @@ public Category getCategory() {
 public void setCategory(Category category) {
 	this.category = category;
 }
-public String getColor() {
-	return color;
+public MultipartFile getImage() {
+	return image;
 }
-public void setColor(String color) {
-	this.color = color;
+public void setImage(MultipartFile image) {
+	this.image = image;
 }
 
 
