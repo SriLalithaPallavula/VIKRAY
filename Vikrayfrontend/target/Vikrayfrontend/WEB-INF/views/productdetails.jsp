@@ -30,6 +30,6 @@
 			</div>
 		</div>
 	</div>
-	<a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
+	                  <a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
 </body>
 </html>

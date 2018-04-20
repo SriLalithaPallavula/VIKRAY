@@ -22,14 +22,14 @@
                             <b>Price</b>: ${product.price }<br> 
                             <b>Quantity </b>:${product.quantity }
 						</td>
-						<td><img
-							src='<c:url value="/resources/images/${product.id }.png"></c:url>' height="250px" width="250px" alt="NA">
+						<td>
+						<img src='<c:url value="/resources/images/${product.id }.png"></c:url>' height="250px" width="250px" alt="NA">
 						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 	</div>
-	<a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
+	                       <a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
 </body>
 </html>

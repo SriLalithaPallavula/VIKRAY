@@ -10,8 +10,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost:8080/project1frontend/resources/css/table.css">
-<link rel="stylesheet" href="http://localhost:8080/project1frontend/resources/css/navbar.css">
+<link rel="stylesheet" href="http://localhost:8080/Vikrayfrontend/resources/css/table.css">
+<link rel="stylesheet" href="http://localhost:8080/Vikrayfrontend/resources/css/navbar.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
@@ -47,7 +47,7 @@
 				<li ><a href='<c:url value="/"></c:url>'>Home</a></li>
 				<!-- value is for DispatcherServlet
 				DispatcherServlet using the value it has to find the handler method which can handle the request
-				http://localhost:8080/project1frontend/all/getproducts -> DispatcherServlet -> /all/getproducts
+				http://localhost:8080/Vikrayfrontend/all/getproducts -> DispatcherServlet -> /all/getproducts
 				-> ProductController.getAllProducts() -> Service -> Dao -> Select * from product 
 				
 				controller returns ModelAndView [model is List<Product>,view is productlist]
@@ -63,13 +63,14 @@
 					<!-- Request parameter
 					parameter name is 'searchCondition' -->
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Kitchen and Dining"></c:url>'>Kitchen and Dining</a>
-					   <a href='<c:url value="/all/searchbycategory?searchCondition=Furniture"></c:url>'>Fashion</a>
-					   <a href='<c:url value="/all/searchbycategory?searchCondition=Education"></c:url>'>Jewelry</a>
+					   <a href='<c:url value="/all/searchbycategory?searchCondition=Beauty"></c:url>'>Beauty</a>
+					   <a href='<c:url value="/all/searchbycategory?searchCondition=Accessories"></c:url>'>Accessories</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Toys"></c:url>'>Toys</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=All"></c:url>'>All</a>
                     </li>
-			</ul>
+                    </ul>
 			</li>
+			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			</ul>
 			</div>
 		</div>
