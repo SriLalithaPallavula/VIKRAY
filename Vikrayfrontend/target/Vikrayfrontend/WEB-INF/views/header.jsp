@@ -62,16 +62,16 @@
 					<li >
 					<!-- Request parameter
 					parameter name is 'searchCondition' -->
-					   <a href='<c:url value="/all/searchbycategory?searchCondition=Kitchen and Dining"></c:url>'>Kitchen and Dining</a>
+					    <a href='<c:url value="/all/searchbycategory?searchCondition=Kitchen and Dining"></c:url>'>Kitchen and Dining</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Beauty"></c:url>'>Beauty</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Accessories"></c:url>'>Accessories</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=Toys"></c:url>'>Toys</a>
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=All"></c:url>'>All</a>
                     </li>
-                    
-            <li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			</ul>
 			</li>
+			
+            <li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			</ul>
 			</div>
 		</div>

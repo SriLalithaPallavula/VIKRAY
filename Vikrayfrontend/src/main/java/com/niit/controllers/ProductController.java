@@ -48,8 +48,7 @@ private ProductService productService;
 	}
 	@RequestMapping(value="/all/getproduct/{id}")  //id is pathvariable  id=1, id=2, id=3
 	//  all/getproduct/1  , all/getproduct/2 , all/getproduct/3...
-	public ModelAndView getProduct(@PathVariable int id){
-		//id =1, 2, 3 
+	public ModelAndView getProduct(@PathVariable int id){//id =1, 2, 3 
 		//Pass this id to Service -> Service has to pass the id to Dao -> select * from product where id=1
 		System.out.println("Product Id is " + id);
 		Product product=productService.getProduct(id);
@@ -150,11 +149,8 @@ private ProductService productService;
 			
 				//it throws checked exception
 				try {
-					
-prodImage.transferTo(new File(paths.toString()));
-				} catch 
-
-(IllegalStateException e) {
+					prodImage.transferTo(new File(paths.toString()));
+				} catch (IllegalStateException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (IOException e) {

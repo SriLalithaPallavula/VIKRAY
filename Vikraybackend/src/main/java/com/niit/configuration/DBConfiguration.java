@@ -3,8 +3,15 @@ package com.niit.configuration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.model.Authorities;
+import com.niit.model.BillingAddress;
+import com.niit.model.Cart;
+import com.niit.model.CartItem;
 import com.niit.model.Category;
+import com.niit.model.Customer;
 import com.niit.model.Product;
+import com.niit.model.ShippingAddress;
+import com.niit.model.User;
 
 import java.util.Properties;
 
@@ -39,17 +46,15 @@ public class DBConfiguration {
 	@Bean //SessionFactory - factory of session objects
 	public SessionFactory sessionFactory() {
 		System.out.println("Entering sessionFactory creation method");
-		LocalSessionFactoryBuilder lsf=
-				new LocalSessionFactoryBuilder(getDataSource());
+		LocalSessionFactoryBuilder lsf=new LocalSessionFactoryBuilder(getDataSource());
 		Properties hibernateProperties=new Properties();
-		hibernateProperties.setProperty(
-				"hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+		hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 		hibernateProperties.setProperty("hibernate.show_sql", "true");
 		lsf.addProperties(hibernateProperties);
 		//An array of Class objects of all the entities
 		//Map all entities to relational table
-		Class classes[]=new Class[]{Product.class,Category.class};
+		Class classes[]=new Class[]{Product.class,Category.class,Authorities.class,BillingAddress.class,Cart.class,Customer.class,ShippingAddress.class,User.class,CartItem.class};
 		//localsesionfactorybuilder -> sessionfactory -> map all entities with relation table
 		System.out.println("SessionFactory bean " + lsf);
 	    return lsf.addAnnotatedClasses(classes).buildSessionFactory();
