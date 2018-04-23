@@ -25,8 +25,13 @@ public ModelAndView getHomePage()
 	
 	return mv;
 	
-	
-
 }
-
+@RequestMapping("/login")
+public String loginPage(@RequestParam(required=false) String error,@RequestParam(required=false) String logout,Model model){
+	if(error!=null)
+	model.addAttribute("error","Invalid Username/Password");
+	if(logout!=null)
+		model.addAttribute("msg","Loggedout successfully");
+	return "login";
+}
 }
