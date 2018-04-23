@@ -79,6 +79,9 @@
 			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			<li><a href='<c:url value="/login"></c:url>'>Sign In</a></li>
 			</c:if>
+			
+			<li><a href="<c:url value='/cart/purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+			
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
 			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>logout</a></li>
 			</c:if>
