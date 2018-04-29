@@ -1,4 +1,3 @@
-
 package com.niit.model;
 
 import java.util.List;

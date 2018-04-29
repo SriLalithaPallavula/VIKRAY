@@ -3,6 +3,8 @@ package com.niit.controllers;
 import java.security.Principal;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.model.CartItem;
+import com.niit.model.Customer;
+import com.niit.model.CustomerOrder;
 import com.niit.model.Product;
 import com.niit.model.ShippingAddress;
 import com.niit.model.User;
@@ -55,10 +59,11 @@ private ProductService productService;
 	
 	
 	@RequestMapping(value="/cart/purchasedetails")
-	public String getPurchaseDetails(@AuthenticationPrincipal Principal principal,Model model){
+	public String getPurchaseDetails(@AuthenticationPrincipal Principal principal,Model model,HttpSession session){
 		String email=principal.getName();
 		User user=cartItemService.getUser(email);
 		List<CartItem> cartItems=user.getCartItems();//list of cartitems/products
+		session.setAttribute("cartSize", cartItems.size());
 		model.addAttribute("cartItems",cartItems);
 		return "cart";
 	}
@@ -72,14 +77,20 @@ private ProductService productService;
 	}
 	@RequestMapping(value="/cart/clearcart")
     public String clearCart(@AuthenticationPrincipal Principal principal){
-		
+		User user=cartItemService.getUser(principal.getName());
+		List<CartItem> cartItems=user.getCartItems();
+		for(CartItem cartItem:cartItems)
+			cartItemService.removeCartItem(cartItem.getCartitemid());
 		return "redirect:/cart/purchasedetails";
     }
 	
 	@RequestMapping(value="/cart/checkout")
 	public String checkout(@AuthenticationPrincipal Principal principal,Model model){
-	
-		return "shippingaddress";
+	   User user=cartItemService.getUser(principal.getName());
+	   Customer customer=user.getCustomer();
+	   ShippingAddress shippingAddress=customer.getShippingaddress();
+	   model.addAttribute("shippingaddress",shippingAddress);
+	   return "shippingaddress";
 	}
 	
 	
@@ -87,12 +98,20 @@ private ProductService productService;
 	//from shippingaddressform.jsp to createOrder method
 	public String createOrder(@AuthenticationPrincipal Principal principal ,
 			                  @ModelAttribute ShippingAddress shippingaddress,
-			                  Model model){
+			                  Model model,
+			                  HttpSession session){
+		User user=cartItemService.getUser(principal.getName());
+		Customer customer=user.getCustomer();
+		customer.setShippingaddress(shippingaddress);//updated shippingaddress if it is updated.
+		user.setCustomer(customer);
 		
-		
-		
+		CustomerOrder customerOrder=cartItemService.createOrder(user);
+		List<CartItem> cartItems=user.getCartItems();
+		for(CartItem cartItem:cartItems)
+			cartItemService.removeCartItem(cartItem.getCartitemid());
+		model.addAttribute("order",customerOrder);
+		session.setAttribute("cartSize", 0);
 		return "orderdetails";
 	}
-	
 	
 }
