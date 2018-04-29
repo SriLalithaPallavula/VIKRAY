@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+ <c:if test="${productNA !=null}">
+The product ${productNA.productname } is not available and so removed from the cart
+</c:if>
 <div>
 <div>
 <a href="<c:url value='/cart/clearcart'></c:url>" class="btn btn-danger" pull-left  >
@@ -15,8 +18,7 @@
 Clear Cart
 </a>
 
-<a href="<c:url value='/cart/checkout'></c:url>" class="btn btn-success pull-right">
-<span class="glyphicon glypicon-shopping-cart"></span> Check Out  </a>
+
 <table class="table table-striped">
 <thead id="thead">
 <tr><th>ProductName</th><th>Quantity</th><th>Total Price</th><th>Remove</th>
@@ -35,21 +37,23 @@ Clear Cart
 
 <span class="glyphicon glyphicon-remove" ></span>Remove
 </a></td>
-<td></td>
 <!--  grandTotal = cartItem.totalPrice + grandTotal -->
 
 <c:set var="grandTotal" value="${grandTotal + cartItem.totalPrice }"></c:set>
 </tr>
+<hr>
 </c:forEach>
 </tbody>
 </table>
 Total Price : ${grandTotal }
 </div>
-
+<c:if test="${empty(cartItems) }">
+<h3>Your Cart is empty</h3>
+</c:if>
+<c:if test="${!empty(cartItems)}">
+<a href="<c:url value='/cart/checkout'></c:url>" class="btn btn-success pull-right">
+<span class="glyphicon glyphicon-shopping-cart"></span> Place Order  </a>
+</c:if>
 </div>
 </body>
 </html>
-
-
-
-

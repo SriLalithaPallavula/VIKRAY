@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.model.Authorities;
 import com.niit.model.Cart;
 import com.niit.model.Customer;
+import com.niit.model.User;
 
 @Repository
 @Transactional
@@ -39,4 +40,3 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 //all objects are detached
 }
-

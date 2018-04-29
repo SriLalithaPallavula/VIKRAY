@@ -83,6 +83,7 @@
 			<li><a href="<c:url value='/cart/purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 			
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
+			<li><a href="">${pageContext.request.userPrincipal.name}</a></li>
 			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>logout</a></li>
 			</c:if>
 			</ul> 

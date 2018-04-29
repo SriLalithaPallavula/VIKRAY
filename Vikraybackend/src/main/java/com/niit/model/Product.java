@@ -14,6 +14,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 
+
 @Entity  //mapped with Product relational table
 @Table(name="product_s180396")
 public class Product {
