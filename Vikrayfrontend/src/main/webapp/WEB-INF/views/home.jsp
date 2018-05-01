@@ -34,14 +34,14 @@
 				</div>
 				<div class="item">
 					<img class="second-slide home-image"
-						src='<c:url value="/resources/images/fashion.png"></c:url>'
+						src='<c:url value="/resources/images/shoes.jpg"></c:url>'
 						alt="Second slide" height="50%" width="100%">
 					<div class="container">
 					</div>
 				</div>
 				<div class="item">
 					<img class="third-slide home-image "
-						src='<c:url value="/resources/images/books.jpg"></c:url>'
+						src='<c:url value="/resources/images/default-furniture-dealers-4.jpg"></c:url>'
 						alt="Third slide" height="50%" width="100%">
 					<div class="container">
 					</div>
@@ -49,7 +49,7 @@
 				<div class="item">
 					<!-- mvc:resources /resources/**  -> /WEB-INF/resources -->
 					<img class="forth-slide home-image "
-						src='<c:url value="/resources/images/kitchen wear.jpg"></c:url>'
+						src='<c:url value="/resources/images/KitchenTools_Feat.png"></c:url>'
 						alt="forth slide" height="50%" width="100%">
 				</div>
 				<div class="item">
@@ -63,7 +63,7 @@
 				<div class="item">
 					<!-- mvc:resources /resources/**  -> /WEB-INF/resources -->
 					<img class="sixth-slide home-image "
-						src='<c:url value="/resources/images/Disney-Toys.jpg"></c:url>'
+						src='<c:url value="/resources/images/DSCF1199 (Large).JPG"></c:url>'
 						alt="sixth slide" height="50%" width="100%">
 					<div class="container">
 					</div>

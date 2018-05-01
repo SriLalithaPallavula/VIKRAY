@@ -8,9 +8,10 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color:#4B4E44;
-   color: white;
-   text-align: left;
+   background-color: #020814;
+   color: #F2378A;
+   padding: 2px;
+   text-align: center;
 }
 </style>
 </head>
@@ -19,8 +20,8 @@
 
 
 <div class="footer">
-	<P>Copyright &copy 2018 </p>
-							 <p>Thankyou for visiting</p></a>
+	<P>&copy 2018.All Rights reserved</p>
+							 
 </div>
 
 </body>
