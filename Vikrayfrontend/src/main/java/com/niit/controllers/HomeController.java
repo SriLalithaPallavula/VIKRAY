@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 @Controller
 public class HomeController {
 public HomeController(){
@@ -17,14 +17,10 @@ public HomeController(){
 // /WEB-INF/views/home.jsp
 @RequestMapping("/")
 public ModelAndView getHomePage()
-{
-	
-	
-	
+{	
 	ModelAndView mv=new ModelAndView("home");
 	
 	return mv;
-	
 }
 @RequestMapping("/login")
 public String loginPage(@RequestParam(required=false) String error,@RequestParam(required=false) String logout,Model model){
@@ -34,4 +30,6 @@ public String loginPage(@RequestParam(required=false) String error,@RequestParam
 		model.addAttribute("msg","Loggedout successfully");
 	return "login";
 }
+
+
 }

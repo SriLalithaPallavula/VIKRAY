@@ -10,9 +10,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.Category;
-import com.niit.model.Customer;
 import com.niit.model.Product;
-@Repository
+@Repository ("productDao")
+		
 @Transactional
 public class ProductDaoImpl implements ProductDao {
 	@Autowired
@@ -62,8 +62,8 @@ private SessionFactory sessionFactory;
 		return categories;
 	}
 	
-	
 
 }
+
 
 

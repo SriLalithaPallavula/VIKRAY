@@ -12,23 +12,24 @@
 		<div class="panel panel-info" style="width: 450px">
 			<!-- product.getProductName() -->
 			<div class="panel-heading">Product Details</div>
+			
 			<div class="panel-body">
 			<c:url value="/cart/addtocart/${product.id }" var="url"></c:url>
 			<form action="${url }" >
 				<table>
 					<tr>
-						<td><b>Product Name</b>: ${product.productname }<br> 
-						<b>Category Name</b>:${product.category.categoryname }<br> 
-						<b>Product Description</b>: ${product.productdescription }<br>
-                            <b>Color</b>:${product.color }<br> 
-                            <b>Price</b>: ${product.price }<br> 
-                            <b>Quantity </b>:${product.quantity }
+						<td><b>ProductName</b>: ${product.productname }<br>
+						    <b>CategoryName</b>:${product.category.categoryname }<br> 
+						    <b>ProductDescription</b>: ${product.productdescription }<br>
+                              
+                             <b>Price</b>: ${product.price }<br> <b>Quantity </b>:${product.quantity }
 						</td>
-						<td>
-						<img src='<c:url value="/resources/images/${product.id }.png"></c:url>' height="250px" width="250px" alt="NA">
+						<td><img
+							src='<c:url value="/resources/images/${product.id }.png"></c:url>' height="250px" width="250px" alt="NA">
 						</td>
 					</tr>
 				</table>
+				
 				<c:if test="${product.quantity==0 }">
 				<button class="btn btn-warning" disabled>Out Of Stock</button>
 				</c:if>
@@ -42,8 +43,10 @@
 			  </c:if>
 			  </form>
 			</div>
+			
 		</div>
 	</div>
-	                       <a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
+	<a href='<c:url value="/all/getproducts"></c:url>'>Back</a>
 </body>
 </html>
+

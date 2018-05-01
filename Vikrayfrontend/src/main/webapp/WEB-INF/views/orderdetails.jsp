@@ -13,7 +13,7 @@
 <form:form action="${url }" modelAttribute="order">
             <div class="row">
 
-                             <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+               <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
 
                        <div >
                             <h1 align="center">Invoice</h1>
@@ -101,5 +101,3 @@
         </div>
         </div>
         </div>
-
-

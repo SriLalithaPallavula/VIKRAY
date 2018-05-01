@@ -13,3 +13,4 @@ void saveProduct(Product product);
 void updateProduct(Product product);
 List<Category> getAllCategories();
 }
+

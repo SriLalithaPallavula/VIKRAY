@@ -9,7 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
-public class User {
+public class User 
+{
 	@Id
 private String email;
 private String password;

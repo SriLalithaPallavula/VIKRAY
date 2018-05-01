@@ -36,7 +36,7 @@ private ProductService productService;
 		System.out.println("ProductController bean is created");
 	}
 	
-	//http://localhost:8080/Vikrayfrontend/all/getproducts 
+	//http://localhost:8080/project1frontend/all/getproducts 
 	@RequestMapping(value="/all/getproducts")
 	public ModelAndView getAllProducts(){
 		List<Product> products=productService.getAllProducts();
